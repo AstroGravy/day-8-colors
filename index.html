@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+</head>
+<style>
+        /* Color Theme Swatches in Hex */
+    .mural-colors-1-hex { color: #D93D86; }
+    .mural-colors-2-hex { color: #03738C; }
+    .mural-colors-3-hex { color: #6AC4D9; }
+    .mural-colors-4-hex { color: #03A688; }
+    .mural-colors-5-hex { color: #F2C12E; }
+    :root { /* how to make variables in css */
+        --mural-1: #D93D86;
+        --mural-2: #03738C;
+        --mural-3: #6AC4D9;
+        --mural-4: #03A688;
+        --mural-5: #F2C12E;
+    }
+
+    /* Color Theme Swatches in RGBA */
+    .mural-colors-1-rgba { color: rgba(216, 60, 133, 1); }
+    .mural-colors-2-rgba { color: rgba(2, 115, 140, 1); }
+    .mural-colors-3-rgba { color: rgba(106, 196, 216, 1); }
+    .mural-colors-4-rgba { color: rgba(3, 165, 135, 1); }
+    .mural-colors-5-rgba { color: rgba(242, 193, 46, 1); }
+
+    /* Color Theme Swatches in HSLA */
+    .mural-colors-1-hsla { color: hsla(332, 67, 54, 1); }
+    .mural-colors-2-hsla { color: hsla(191, 96, 28, 1); }
+    .mural-colors-3-hsla { color: hsla(191, 59, 63, 1); }
+    .mural-colors-4-hsla { color: hsla(168, 96, 33, 1); }
+    .mural-colors-5-hsla { color: hsla(44, 88, 56, 1); }
+
+    .horiz-nav {
+        background-color: var(--mural-2);
+        }
+        .horiz-nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        }
+        .horiz-nav li {
+        margin-right: 25px;
+        }
+        .horiz-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: block;
+        background-color: var(--mural-2);
+        }
+        /* Hover effect */
+        .horiz-nav a:hover {
+        background-color: var(--mural-3);
+        }
+        /* Active (current page) link */
+        .horiz-nav a.active {
+        background-color: var(--mural-4);  /* a green highlight */
+        font-weight: bold;          /* make it stand out */
+        }
+        .horiz-nav a.active:hover {
+            color: black;
+        }
+        .horiz-nav a.active:hover ~ a {
+            color: black;
+        }
+        .horiz-nav .active:hover + .hide { /*this shows hide*/
+            visibility: visible;
+            
+        }
+        .hide {/* this is hidden*/
+            visibility: hidden;
+            position: absolute;
+            display: block;
+            top: 0;
+            transform: translate(0, 54px);
+        }
+        .hide:hover { /*keeps hide visible when you hover over it*/
+            visibility: visible;
+        }
+
+    p {
+        color: var(--mural-5);
+    }
+
+</style>
+<body style="background-color: var(--mural-1);">
+    <nav class="horiz-nav">
+        <ul>
+            <div class="active">
+                <li><a class="active" href="index.html">Home</a></li>
+            </div>
+            <div class="hide">
+                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Secret Link</a></li>
+            </div>
+            <div>
+                <li><a href="index.html">CFOP</a></li>
+            </div>
+            <div>
+                <li><a href="index.html">Resource</a></li>
+            </div>
+            <div>
+                <li><a href="index.html">Gallery</a></li>
+            </div>
+            <div>
+                <li><a href="index.html">Contact</a></li>
+            </div>
+        </ul>
+    </nav>
+    <!--add a paragraph describing which type of color scheme you are using: monochromatic, analogous, complementary, or triadic
+    and which emotion you are trying to elicit from the webpage viewer (e.g. anger, warmth, isolation, fantasy)-->
+    <p>I am using 3 triadic colors (magenta, yellow, and cyan), and also 3 analogous colors (dark blue, cyan, and blue-green).</p>
+    <p>The emotions I am trying to elicit from the webpage viewer are happiness, warmth, and fantasy.</p>
+    <div style="text-align: center;">
+    <img src="images/mural.JPG" style="width: 25%;">
+    </div>
+</body>
+</html>
